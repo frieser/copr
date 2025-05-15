@@ -1,7 +1,7 @@
-Name:           Windsurf
 Version:        1.7.2
 Release:        1%{?dist}
 Summary:        Windsurf - The world's first agentic IDE
+Name:           Windsurf
 
 License:        Proprietary
 URL:            https://codeium.com/windsurf
