@@ -5,7 +5,7 @@ Summary:		Key remapping daemon for linux
 URL:			https://github.com/rvaiya/keyd
 License:		MIT
 Source0:        %url/archive/refs/tags/v%version.tar.gz
-BuildRequires:	gcc mold make kernel-headers systemd-rpm-macros anda-srpm-macros
+BuildRequires:	gcc mold make kernel-headers systemd-rpm-macros 
 Packager:   madonuko <mado@fyralabs.com>
 
 %description
