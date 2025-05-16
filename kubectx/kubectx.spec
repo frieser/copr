@@ -39,3 +39,5 @@ install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/kubens.fish "%{bui
 %{_datadir}/fish/vendor_completions.d/kubens.fish
 
 %changelog
+* Fri May 16 2025 Hector M <frieserpaldi@gmail.com> - 0.12.29-1
+- Initial import
