@@ -24,3 +24,5 @@ mkdir -p %{buildroot}/%{_bindir}
 %{_bindir}/%{name}
 
 %changelog
+* Fri May 16 2025 Hector M <frieserpaldi@gmail.com> - 0.12.29-1
+- Initial import
