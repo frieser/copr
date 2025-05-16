@@ -1,5 +1,5 @@
 Name:          terraform
-Version:       0.12.29
+Version:       1.12.0
 Release:       1%{?dist}
 Summary:       Terraform enables you to safely and predictably create, change, and improve infrastructure.
 Group:         Development Tools
