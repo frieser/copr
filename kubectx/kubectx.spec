@@ -5,7 +5,7 @@ Summary:        The Kubernetes context manager
 
 License: Apache License 2.0
 URL: https://github.com/ahmetb/kubectx
-Source0: https://github.com/ahmetb/kubectx/archive/refs/tags/v%{version}.tar.gz
+Source0: https://github.com/ahmetb/kubectx/releases/download/v%{version}/kubectx_v%{version}_linux_x86_64.tar.gz
 
 Requires: bash
 
