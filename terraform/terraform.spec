@@ -8,6 +8,8 @@ License:       MPL 2.0
 Source0:       https://releases.hashicorp.com/terraform/%{version}/%{name}_%{version}_linux_amd64.zip
 ExclusiveArch: x86_64
 
+%define debug_package %{nil}
+
 %description
 Terraform enables you to safely and predictably create, change, and improve infrastructure. It is an open source tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.
 
