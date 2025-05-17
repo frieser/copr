@@ -3,41 +3,28 @@ Version:        0.9.5
 Release:        1%{?dist}
 Summary:        The Kubernetes context manager
 
-License: Apache License 2.0
-URL: https://github.com/ahmetb/kubectx
-Source0: https://github.com/ahmetb/kubectx/releases/download/v%{version}/kubectx_v%{version}_linux_x86_64.tar.gz
+License:        Apache License 2.0
+URL:            https://github.com/ahmetb/kubectx
+Source0:        https://github.com/ahmetb/kubectx/releases/download/v%{version}/kubectx_v%{version}_linux_x86_64.tar.gz
 
-Requires: bash
+Requires:       bash
+
+%global debug_package %{nil}
 
 %description
 Kubernetes context manager for bash and zsh.
 
 %prep
-%autosetup -n %{name}-%{version}
+%autosetup -c
 
 %install
 mkdir -p %{buildroot}/%{_bindir}
-install -Dm 755 -p %{_builddir}/%{name}-%{version}/kubectx %{_builddir}/%{name}-%{version}/kubens -t "%{buildroot}/usr/bin"
-
-# completion
-install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/kubectx.bash "%{buildroot}%{_datadir}/bash-completion/completions/kubectx"
-install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/kubens.bash "%{buildroot}%{_datadir}/bash-completion/completions/kubens"
-install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/_kubectx.zsh "%{buildroot}%{_datadir}/zsh/site-functions/_kubectx"
-install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/_kubens.zsh "%{buildroot}%{_datadir}/zsh/site-functions/_kubens"
-install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/kubectx.fish "%{buildroot}%{_datadir}/fish/vendor_completions.d/kubectx.fish"
-install -Dm 644 -p %{_builddir}/%{name}-%{version}/completion/kubens.fish "%{buildroot}%{_datadir}/fish/vendor_completions.d/kubens.fish"
-
+chmod +x %{name}
+install -D -m 0755 %{name} %{buildroot}%{_bindir}/%{name}
 
 %files
 %{_bindir}/%{name}
-%{_bindir}/kubens
-%{_datadir}/bash-completion/completions/kubectx
-%{_datadir}/bash-completion/completions/kubens
-%{_datadir}/zsh/site-functions/_kubectx
-%{_datadir}/zsh/site-functions/_kubens
-%{_datadir}/fish/vendor_completions.d/kubectx.fish
-%{_datadir}/fish/vendor_completions.d/kubens.fish
 
 %changelog
-* Fri May 16 2025 Hector M <frieserpaldi@gmail.com> - 0.12.29-1
+* Fri May 16 2025 Hector M <frieserpaldi@gmail.com> - 0.9.5-1
 - Initial import
